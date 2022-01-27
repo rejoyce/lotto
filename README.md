@@ -11,7 +11,7 @@ I store the data in a List of *Results* each Result object contains the data and
 
 The whole application starts up in Spring boot and I have only implemented 2 webservices, one to get the draws that a number appeared in and a 2nd to give some useful "meta" information about the selected number.
 
-The UI was kept simple, my own skills would not be in the UI field, I used an HTML page, some CSS and Vanilla Javascript, I decided to use plain JS to keep it simple but probably would have been better advised to use jQuery for speed of development.
+The UI was kept simple, my own skills are more server-side, I used an HTML page, some CSS and Vanilla Javascript, I decided to use plain JS to keep it simple but in hindsight probably would have been better advised to use jQuery for speed of development.
 
 # Running
 
@@ -34,7 +34,7 @@ Additional ideas I have would be to add more statistics for each number and brin
 
 Statistics could be delivered showing the number of times each number had been drawn and how this compares with how often on average it *should* have been drawn. Numbers could then identify the numbers that have occurred less and more often
 
-There are 2 therories :
+There are 2 theories :
 
 1. The numbers which have occurred more often in the past will continue to crop up more often
 2. In the long run (approaching infinity) each number will occur an equal number of times, therefore if a number has not been drawn as often in the past then it is more likely to be drawn in the future
