@@ -10,6 +10,30 @@
             document.getElementById("resultMetaData").innerHTML = "";
         }
 
+        function leastFrequent(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", serviceUrl + "/getleastfrequent", true);
+            xmlhttp.onreadystatechange = function() {
+               if(xmlhttp.readyState===4 && xmlhttp.status === 200){
+                    var results = xmlhttp.responseText;
+                    document.getElementById("results").innerHTML = "Least Frequently drawn numbers are : " + results;
+               }
+            }
+            xmlhttp.send();
+        }
+
+        function mostFrequent(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", serviceUrl + "/getmostfrequent", true);
+            xmlhttp.onreadystatechange = function() {
+               if(xmlhttp.readyState===4 && xmlhttp.status === 200){
+                    var results = xmlhttp.responseText;
+                    document.getElementById("results").innerHTML = "Most Frequently drawn numbers are : " + results;
+               }
+            }
+            xmlhttp.send();
+        }
+
         function click(val){
             loadDrawData(val);
             loadDrawMetaData(val);
@@ -125,6 +149,12 @@
     <div class="float-child" align="center">
         <div class="divbutton">
             <button type="button" id="clear" onclick="clearDiv()">Clear Results</button>
+        </div>
+        <div class="divbutton">
+            <button type="button" id="leastFrequent" onclick="leastFrequent()">Show least frequent numbers</button>
+        </div>
+        <div class="divbutton">
+            <button type="button" id="mostFrequent" onclick="mostFrequent()">Show most frequent numbers</button>
         </div>
         <br/>
         <div id = "resultMetaData"></div>

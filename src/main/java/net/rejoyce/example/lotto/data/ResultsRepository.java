@@ -18,9 +18,17 @@ public class ResultsRepository {
 
     private static List<Result> allResults;
 
-    /**
-     * This will scrape the results of the irish lotto draw since 1988
-     */
+    public static int getNumberOfDraws() {
+        return allResults.size();
+    }
+
+    public static List<Result> getAllResults() {
+        return allResults;
+    }
+
+        /**
+         * This will scrape the results of the irish lotto draw since 1988
+         */
     public static void scrapeAllResults() {
         scrapeAllResults(1988);
     }
@@ -101,5 +109,9 @@ public class ResultsRepository {
         } else {
             return new StringBuffer().append(number).append(" has never been drawn.").toString();
         }
+    }
+
+    public static int getNumberOfDrawsSince(final LocalDate date) {
+        return allResults.stream().filter(x -> x.getDate().isAfter(date)||x.getDate().isEqual(date)).collect(Collectors.toList()).size();
     }
 }

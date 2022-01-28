@@ -22,6 +22,7 @@ As this is a Spring Boot Application in order to run it the class **LottoApplica
 I have tested extensively manually and the system is delivering up accurate data, it is very quick, everything is in memory. I have written some Unit tests in Java for the Java code.
 
 # The Future
+## Now Implemented ;)
 
 Additional ideas I have would be to add more statistics for each number and bring into this the fact that the draw was extended numerous time over the years to include more numbers :
 | Version | Game format |
@@ -29,7 +30,7 @@ Additional ideas I have would be to add more statistics for each number and brin
 | Original Game | 6/36 |
 | 22 August 1992 Expansion | 6/39 |
 | 24 September 1994 | 6/42 |
-| November 2006 | 6/45 |
+| 4 November 2006 | 6/45 |
 | 3 September 2015 | 6/47 |
 
 Statistics could be delivered showing the number of times each number had been drawn and how this compares with how often on average it *should* have been drawn. Numbers could then identify the numbers that have occurred less and more often
